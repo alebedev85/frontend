@@ -28,7 +28,7 @@
     "format": "prettier --write './**/*.{html,css,scss,js,jsx,tsx,ts}'",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint-fix": "eslint src --fix",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "devDependencies": {
     "@types/node": "^20.10.4",
@@ -44,8 +44,7 @@
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "eslint-plugin-react-refresh": "^0.3.4",
-    "husky": "^8.0.3"
+    "eslint-plugin-react-refresh": "^0.3.4"
   },
   "eslintConfig": {
     "extends": [
