@@ -27,7 +27,8 @@
     "check": "prettier --check './**/*.{html,css,scss,js,jsx,tsx,ts}'",
     "format": "prettier --write './**/*.{html,css,scss,js,jsx,tsx,ts}'",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "lint-fix": "eslint src --fix"
+    "lint-fix": "eslint src --fix",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@types/node": "^20.10.4",
