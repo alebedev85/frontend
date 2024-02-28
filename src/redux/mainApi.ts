@@ -1,11 +1,10 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { BASE_URL } from '../utils/const';
 
-const baseUrl = 'https://ambsasador-url';
-
-export const api = createApi({
+export const mainApi = createApi({
   reducerPath: 'mainApi',
   baseQuery: fetchBaseQuery({
-    baseUrl,
+    baseUrl: BASE_URL,
   }),
   endpoints: () => ({}),
 });
