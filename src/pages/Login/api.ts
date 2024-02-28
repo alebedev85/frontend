@@ -1,7 +1,7 @@
-import { api } from '../../redux/mainApi';
+import { mainApi } from '../../redux/mainApi';
 import { LoginFormData } from './types';
 
-const loginApi = api.injectEndpoints({
+const loginApi = mainApi.injectEndpoints({
   endpoints: (build) => ({
     signIn: build.mutation<void, LoginFormData>({
       query: (body) => ({

@@ -1,16 +1,10 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store';
-
-type User = {
-  id: number;
-  username: string;
-  telegram: string;
-  email: string;
-};
+import { UserType } from '../../types';
 
 type InitialState = {
   isAuth: boolean;
-  user: User | null;
+  user: UserType | null;
 };
 
 const initialState: InitialState = {
@@ -22,7 +16,7 @@ const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
-    setUser: (state, action: PayloadAction<User>) => {
+    setUser: (state, action: PayloadAction<UserType>) => {
       state.isAuth = true;
       state.user = action.payload;
     },
