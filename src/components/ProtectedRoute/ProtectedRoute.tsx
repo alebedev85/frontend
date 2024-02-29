@@ -1,25 +1,25 @@
 import { Navigate, Outlet, useLocation } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import Header from '../Header/Header';
-import './ProtectedRoute.scss';
+import styles from './ProtectedRoute.module.scss';
 // import { useAppSelector } from '@/redux/store';
 // import { authSelector } from '@/redux/slices/authSlice';
 
-export default function ProtectedRoute({ isLoading }: { isLoading: boolean }) {
+export default function ProtectedRoute() {
   // const { isAuth } = useAppSelector(authSelector);
   const isAuth = true;
   const location = useLocation();
   return isAuth ? (
-    <div className="container">
-      <Header />
-      <div className="layout">
-        <Navbar />
-        <div className="page-wrapper">
+    <div className={styles.container}>
+      <Navbar />
+      <div className={styles.layout}>
+        <Header />
+        <div className={styles.wrapper}>
           <Outlet />
         </div>
       </div>
     </div>
   ) : (
-    !isLoading && <Navigate state={{ from: location }} to="/login" replace />
+    <Navigate state={{ from: location }} to="/login" replace />
   );
 }

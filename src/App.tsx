@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route element={<ProtectedRoute isLoading />} />
+        <Route path="/" element={<ProtectedRoute />} />
       </Routes>
     </BrowserRouter>
   );
