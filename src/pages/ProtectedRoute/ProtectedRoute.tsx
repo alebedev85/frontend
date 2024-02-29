@@ -1,6 +1,6 @@
 import { Navigate, Outlet, useLocation } from 'react-router-dom';
-import Navbar from '../Navbar/Navbar';
-import Header from '../Header/Header';
+import Navbar from '../../components/Navbar/Navbar';
+import Header from '../../components/Header/Header';
 import styles from './ProtectedRoute.module.scss';
 // import { useAppSelector } from '@/redux/store';
 // import { authSelector } from '@/redux/slices/authSlice';
