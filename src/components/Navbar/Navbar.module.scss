@@ -1,3 +1,6 @@
+@import '../../styles/mixins';
+@import '../../styles/vars';
+
 .navbar {
   padding-top: 40px;
   display: flex;
@@ -9,7 +12,7 @@
   border-radius: 8px;
   box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  background-color: #F9FAFB;
+  background-color: $grey;
 
   &__icon {
     width: 24px;
@@ -30,19 +33,16 @@
 
 
     &:hover {
-      background-color: #f1f6ff;
+      background-color: $blue;
     }
   }
 
   &__link {
     text-decoration: none;
-    color: #1a1b22;
+    color: $black;
     height: 100%;
     width: 100%;
     box-sizing: border-box;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px; /* 120% */
+    @include font(20px, 400, 24px);
   }
 }
