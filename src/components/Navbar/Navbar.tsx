@@ -5,12 +5,12 @@ import styles from './Navbar.module.scss';
 
 export default function Navbar() {
   return (
-    <div className={styles.container}>
-      <img className={styles.icon} src={icon} alt="Yandex icon" />
-      <ul className={styles.list}>
+    <div className={styles.navbar}>
+      <img className={styles.navbar__icon} src={icon} alt="Yandex icon" />
+      <ul className={styles.navbar__list}>
         {navbarMenuList.map((item) => (
-          <li>
-            <NavLink to={item.link} className={styles.item}>
+          <li className={styles.navbar__item}>
+            <NavLink to={item.link} className={styles.navbar__link}>
               {item.label}
             </NavLink>
           </li>

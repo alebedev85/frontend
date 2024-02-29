@@ -1,0 +1,48 @@
+.navbar {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 129px;
+  width: 124px;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  background-color: #F9FAFB;
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__item {
+    padding: 16px 0 16px 16px;
+
+
+    &:hover {
+      background-color: #f1f6ff;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #1a1b22;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 120% */
+  }
+}
