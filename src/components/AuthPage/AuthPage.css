@@ -1,0 +1,61 @@
+.authPage__left-triangle {
+  position: absolute;
+  top: 60px;
+  left: 0px;
+}
+
+.authPage__top-circle {
+  position: absolute;
+  right: 51px;
+  top: 0;
+}
+
+.authPage__bottom-rectangle {
+  position: absolute;
+  right: 29px;
+  bottom: 0;
+}
+
+/* .authPage__textfield {
+  background-color: white;
+}
+
+.authPage__form-label {
+  color: white;
+}
+ */
+.authPage__heading {
+  margin: 0 0 28px;
+  color: var(--Main-blue-button, #5a9bff);
+  font-feature-settings: "clig" off, "liga" off;
+  /* H1 Regular */
+  font-family: "YS Display Regular Regular";
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 117.647% */
+}
+
+.authPage__span-acent {
+  margin: 28px 0;
+  color: var(--Main-white, #fff);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  /* B2 Regular */
+  font-family: "YS Display Regular Regular";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+
+.authPage__form-error {
+  color: var(--Error, #ff0200);
+  font-feature-settings: "clig" off, "liga" off;
+  /* Caption2 Regular */
+  font-family: "YS Display";
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px; /* 109.091% */
+}
