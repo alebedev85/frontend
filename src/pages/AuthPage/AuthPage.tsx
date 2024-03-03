@@ -6,12 +6,42 @@ import {
   Input,
   InputLabel,
 } from '@mui/material';
+import { useForm } from 'react-hook-form';
+import { LoginFormData } from './types';
+// import { useAppDispatch } from '../../redux/store';
+import { useSignInMutation } from './api';
 import leftTriangle from '../Images/left_triangle.svg';
 import topCircle from '../Images/top_circle.svg';
 import bottomRectangle from '../Images/bottom_rectangle.svg';
 import './AuthPage.css';
 
 function AuthPage() {
+  const [signIn] = useSignInMutation();
+  // const dispatch = useAppDispatch();
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    setError,
+  } = useForm<LoginFormData>({
+    defaultValues: { login: '', password: '' },
+    mode: 'onChange',
+  });
+
+  const onSubmit = async (data: LoginFormData) => {
+    signIn(data)
+      .unwrap()
+      .then((res) => {
+        // eslint-disable-next-line no-console
+        console.log(res);
+      })
+      .catch(() => {
+        setError('login', { message: 'Invalid login or password' });
+        setError('password', { message: 'Invalid login or password' });
+      });
+  };
+
   return (
     <>
       <Box
@@ -26,7 +56,7 @@ function AuthPage() {
           component="form"
           display="flex"
           flexDirection="column"
-          // onSubmit={}
+          onSubmit={handleSubmit(onSubmit)}
         >
           <FormControl
             sx={{
@@ -53,8 +83,6 @@ function AuthPage() {
               Логин
             </InputLabel>
             <Input
-              /* value={login} */
-              // onChange={}
               disableUnderline
               sx={{
                 backgroundColor: 'white',
@@ -63,14 +91,16 @@ function AuthPage() {
                 border: '1px solid var(--Black-100, #DDE0E4)',
                 padding: '10px 12px',
               }}
-              /* required={true} */
+              {...register('login', {
+                required: 'Login is required',
+              })}
             />
             <FormHelperText
               className="authPage__form-error"
               error
               sx={{ textAlign: 'left', margin: '0', height: '12px' }}
             >
-              {/* {errorText} */}
+              {errors.login?.message}
             </FormHelperText>
           </FormControl>
 
@@ -93,10 +123,7 @@ function AuthPage() {
               Пароль
             </InputLabel>
             <Input
-              /* value={password} */
-              // onChange={(e) => handleChangePasword(e.target.value)}
               type="password"
-              /* required={true} */
               disableUnderline
               sx={{
                 backgroundColor: 'white',
@@ -105,13 +132,14 @@ function AuthPage() {
                 border: '1px solid var(--Black-100, #DDE0E4)',
                 padding: '10px 12px',
               }}
+              {...register('password', { required: 'Password is required' })}
             />
             <FormHelperText
               className="authPage__form-error"
               error
               sx={{ textAlign: 'left', margin: '0', height: '12px' }}
             >
-              {/* {errorText} */}
+              {errors.password?.message}
             </FormHelperText>
           </FormControl>
           <Button
