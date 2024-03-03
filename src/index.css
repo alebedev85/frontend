@@ -10,3 +10,7 @@ body {
   text-rendering: optimizeLegibility;
   color: #1A1B22;
 }
+
+.page{
+  height:100vh;
+}
