@@ -10,9 +10,9 @@ import { useForm } from 'react-hook-form';
 import { LoginFormData } from './types';
 // import { useAppDispatch } from '../../redux/store';
 import { useSignInMutation } from './api';
-import leftTriangle from '../Images/left_triangle.svg';
-import topCircle from '../Images/top_circle.svg';
-import bottomRectangle from '../Images/bottom_rectangle.svg';
+import leftTriangle from '../../assets/left_triangle.svg';
+import topCircle from '../../assets/top_circle.svg';
+import bottomRectangle from '../../assets/bottom_rectangle.svg';
 import './AuthPage.css';
 
 function AuthPage() {
@@ -43,7 +43,7 @@ function AuthPage() {
   };
 
   return (
-    <>
+    <div className="authPage">
       <Box
         display="flex"
         flexDirection="column"
@@ -176,7 +176,7 @@ function AuthPage() {
       <img className="authPage__left-triangle" src={leftTriangle} />
       <img className="authPage__top-circle" src={topCircle} />
       <img className="authPage__bottom-rectangle" src={bottomRectangle} />
-    </>
+    </div>
   );
 }
 

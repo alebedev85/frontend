@@ -1,3 +1,8 @@
+.authPage{
+  background-color: #1A1B22;
+  height: 100%;
+}
+
 .authPage__left-triangle {
   position: absolute;
   top: 60px;
