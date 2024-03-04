@@ -6,6 +6,7 @@ import './index.css';
 import Send from './pages/Send/Send';
 import Budget from './pages/Budget/Budget';
 import Analytics from './pages/Analytics/Analytics';
+import Main from './pages/Main/Main';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<AuthPage />} />
           <Route path="/" element={<ProtectedRoute />}>
+            <Route path="/" element={<Main />} />
             <Route path="/send" element={<Send />} />
             <Route path="/budget" element={<Budget />} />
             <Route path="/analytics" element={<Analytics />} />

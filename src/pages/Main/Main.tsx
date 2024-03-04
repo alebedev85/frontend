@@ -1,5 +1,10 @@
-import React from 'react';
+import Controles from '../../components/Controles/Controles';
+import styles from './Main.module.scss';
 
 export default function Main() {
-  return <div />;
+  return (
+    <div className={styles.main}>
+      <Controles />
+    </div>
+  );
 }
