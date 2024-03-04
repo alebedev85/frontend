@@ -1,5 +1,6 @@
-import styles from './Controles.module.scss';
 import ControlesInput from '../ControlesInput/ControlesInput';
+import ControlesSwitch from '../ControlesSwitch/ControlesSwitch';
+import styles from './Controles.module.scss';
 
 export default function Controles() {
   return (
@@ -18,6 +19,10 @@ export default function Controles() {
           { label: 'Не прошёл', id: 2 },
         ]}
       />
+      <div className={styles.constroles__switch}>
+        <ControlesSwitch lebele="Гайд 2 да/нет" />
+        <ControlesSwitch lebele="Гайд 1 да/нет" />
+      </div>
     </div>
   );
 }

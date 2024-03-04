@@ -1,0 +1,9 @@
+.controlesSwitch {
+  display: flex;
+  gap: 8px;
+  &__leble {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
