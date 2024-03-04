@@ -24,7 +24,7 @@ export default function ControlesInput({
           getOptionLabel={(option) => option.label}
           sx={{
             width: '313px',
-            height: '64px',
+            height: '40px',
           }}
         />
         <IconButton>

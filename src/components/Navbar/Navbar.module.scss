@@ -7,7 +7,7 @@
   flex-direction: column;
   align-items: center;
   gap: 129px;
-  width: 132px;
+  width: 136px;
   height: 100%;
   border-radius: 8px;
   box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.1);
@@ -43,6 +43,6 @@
     height: 100%;
     width: 100%;
     box-sizing: border-box;
-    @include font(20px, 400, 24px);
+    @include font(19px, 400, 24px);
   }
 }
