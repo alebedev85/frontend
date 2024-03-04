@@ -3,6 +3,9 @@ import { BrowserRouter } from 'react-router-dom';
 import ProtectedRoute from './pages/ProtectedRoute/ProtectedRoute';
 import AuthPage from './pages/AuthPage/AuthPage';
 import './index.css';
+import Send from './pages/Send/Send';
+import Budget from './pages/Budget/Budget';
+import Analytics from './pages/Analytics/Analytics';
 
 function App() {
   return (
@@ -10,7 +13,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<AuthPage />} />
-          <Route path="/" element={<ProtectedRoute />} />
+          <Route path="/" element={<ProtectedRoute />}>
+            <Route path="/send" element={<Send />} />
+            <Route path="/budget" element={<Budget />} />
+            <Route path="/analytics" element={<Analytics />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>
