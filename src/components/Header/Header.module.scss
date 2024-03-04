@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  height: 116px;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+  padding-right: 20px;
+
+  &__badge {
+    margin-left: 28px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    margin-left: 82px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
