@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Table from '@mui/joy/Table';
+import TableButtons from './TableButtons/TableButtons';
 import styles from './TableMain.module.scss';
 import { TableData } from './types';
 
@@ -16,18 +17,31 @@ export default function TableMain({ data }: PropsType) {
         sx={{
           '--Table-headerUnderlineThickness': '3px',
           '--TableCell-height': '44px',
+          'vertical-align': 'none',
         }}
       >
         <thead>
           <tr>
-            <th style={{ width: '11px' }}>№</th>
-            <th>ФИО</th>
+            <th style={{ width: '16px' }}>№</th>
+            <th>
+              <div className={styles.table__cell}>
+                ФИО <TableButtons />
+              </div>
+            </th>
             <th>Телеграмм</th>
             <th>Промокод</th>
             <th>Город</th>
-            <th>Курс</th>
-            <th>Дата регистр</th>
-            <th>Статус</th>
+            <th style={{ width: '44px' }}>Курс</th>
+            <th>
+              <div className={styles.table__cell}>
+                Дата регистр <TableButtons />
+              </div>
+            </th>
+            <th>
+              <div className={styles.table__cell}>
+                Статус <TableButtons />
+              </div>
+            </th>
             <th>Гайд 1</th>
             <th>Гайд 2</th>
             <th>Онбординг</th>

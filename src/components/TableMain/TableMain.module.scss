@@ -7,6 +7,13 @@
     font-weight: 400;
     line-height: 20px;
   }
+
+  &__cell{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 a {

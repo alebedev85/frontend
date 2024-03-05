@@ -1,0 +1,9 @@
+.tableButtons {
+  display: flex;
+  flex-direction: column;
+
+  &__img {
+    width: 20px;
+    height: 20px;
+  }
+}
