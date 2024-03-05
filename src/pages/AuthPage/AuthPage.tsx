@@ -8,18 +8,19 @@ import {
 } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-import { useAppDispatch } from '../../redux/store';
-import { setUser } from '../../redux/slices/authSlice';
+// import { useAppDispatch } from '../../redux/store';
+// import { setUser } from '../../redux/slices/authSlice';
 import { LoginFormData } from './types';
-import { useSignInMutation, useGetCurrentUserQuery } from './api';
+// import { useSignInMutation, useGetCurrentUserQuery } from './api';
+import { useSignInMutation } from './api';
 import leftTriangle from '../../assets/left_triangle.svg';
 import topCircle from '../../assets/top_circle.svg';
 import bottomRectangle from '../../assets/bottom_rectangle.svg';
 import './AuthPage.css';
 
 function AuthPage() {
-  const dispatch = useAppDispatch();
-  const { data: currentUser } = useGetCurrentUserQuery();
+  // const dispatch = useAppDispatch();
+  // const { data: currentUser } = useGetCurrentUserQuery();
   const [signIn] = useSignInMutation();
   const navigate = useNavigate();
 
@@ -42,7 +43,7 @@ function AuthPage() {
         console.log(access);
       })
       .then(() => {
-        currentUser && dispatch(setUser(currentUser));
+        // currentUser && dispatch(setUser(currentUser));
         navigate('/', { replace: true });
       })
       .catch(() => {
