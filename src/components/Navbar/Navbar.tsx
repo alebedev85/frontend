@@ -12,6 +12,7 @@ export default function Navbar() {
       <ul className={styles.navbar__list}>
         {navbarMenuList.map((item) => (
           <li
+            key={item.id}
             className={clsx(
               styles.navbar__item,
               pathname === item.link && styles.navbar__item_active
