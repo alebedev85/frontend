@@ -1,17 +1,21 @@
 import { mainApi } from '../../redux/mainApi';
-import { LoginFormData } from './types';
+import { LoginFormData, signInResType } from './types';
+import { UserType } from '../../types';
 
 const loginApi = mainApi.injectEndpoints({
   endpoints: (build) => ({
-    signIn: build.mutation<void, LoginFormData>({
+    signIn: build.mutation<signInResType, LoginFormData>({
       query: (body) => ({
-        url: '/authorize',
+        url: 'authorize/jwt/create',
         method: 'POST',
         body,
       }),
+    }),
+    getCurrentUser: build.query<UserType, void>({
+      query: () => 'authorize/users/me',
     }),
   }),
   overrideExisting: false,
 });
 
-export const { useSignInMutation } = loginApi;
+export const { useSignInMutation, useGetCurrentUserQuery } = loginApi;

@@ -7,17 +7,21 @@ import {
   InputLabel,
 } from '@mui/material';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
+import { useAppDispatch } from '../../redux/store';
+import { setUser } from '../../redux/slices/authSlice';
 import { LoginFormData } from './types';
-// import { useAppDispatch } from '../../redux/store';
-import { useSignInMutation } from './api';
+import { useSignInMutation, useGetCurrentUserQuery } from './api';
 import leftTriangle from '../../assets/left_triangle.svg';
 import topCircle from '../../assets/top_circle.svg';
 import bottomRectangle from '../../assets/bottom_rectangle.svg';
 import './AuthPage.css';
 
 function AuthPage() {
+  const dispatch = useAppDispatch();
+  const { data: currentUser } = useGetCurrentUserQuery();
   const [signIn] = useSignInMutation();
-  // const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
   const {
     register,
@@ -25,20 +29,25 @@ function AuthPage() {
     formState: { errors },
     setError,
   } = useForm<LoginFormData>({
-    defaultValues: { login: '', password: '' },
+    defaultValues: { username: '', password: '' },
     mode: 'onChange',
   });
 
   const onSubmit = async (data: LoginFormData) => {
     signIn(data)
       .unwrap()
-      .then((res) => {
+      .then(({ access }) => {
+        localStorage.setItem('Bearer', `Bearer ${access}`);
         // eslint-disable-next-line no-console
-        console.log(res);
+        console.log(access);
+      })
+      .then(() => {
+        currentUser && dispatch(setUser(currentUser));
+        navigate('/', { replace: true });
       })
       .catch(() => {
-        setError('login', { message: 'Invalid login or password' });
-        setError('password', { message: 'Invalid login or password' });
+        setError('username', { message: 'Invalid username or password' });
+        setError('password', { message: 'Invalid username or password' });
       });
   };
 
@@ -91,8 +100,8 @@ function AuthPage() {
                 border: '1px solid var(--Black-100, #DDE0E4)',
                 padding: '10px 12px',
               }}
-              {...register('login', {
-                required: 'Login is required',
+              {...register('username', {
+                required: 'Username is required',
               })}
             />
             <FormHelperText
@@ -100,7 +109,7 @@ function AuthPage() {
               error
               sx={{ textAlign: 'left', margin: '0', height: '12px' }}
             >
-              {errors.login?.message}
+              {errors.username?.message}
             </FormHelperText>
           </FormControl>
 

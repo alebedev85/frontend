@@ -5,6 +5,11 @@ export const mainApi = createApi({
   reducerPath: 'mainApi',
   baseQuery: fetchBaseQuery({
     baseUrl: BASE_URL,
+    prepareHeaders: (headers) => {
+      headers.set('Authorization', localStorage.getItem('Bearer') || '');
+
+      return headers;
+    },
   }),
   endpoints: () => ({}),
 });

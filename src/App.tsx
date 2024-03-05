@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Route, Routes } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
 import ProtectedRoute from './pages/ProtectedRoute/ProtectedRoute';
@@ -7,8 +8,19 @@ import Send from './pages/Send/Send';
 import Budget from './pages/Budget/Budget';
 import Analytics from './pages/Analytics/Analytics';
 import Main from './pages/Main/Main';
+import { setUser } from './redux/slices/authSlice';
+import { useAppDispatch } from './redux/store';
+import { useGetCurrentUserQuery } from './pages/AuthPage/api';
 
 function App() {
+  const dispatch = useAppDispatch();
+  const { data: currentUser, isSuccess } = useGetCurrentUserQuery();
+  useEffect(() => {
+    if (isSuccess) {
+      dispatch(setUser(currentUser));
+    }
+  }, [isSuccess]); // eslint-disable-line
+
   return (
     <div className="page">
       <BrowserRouter>
