@@ -1,4 +1,4 @@
-import * as React from 'react';
+import clsx from 'clsx';
 import Table from '@mui/joy/Table';
 import TableButtons from './TableButtons/TableButtons';
 import styles from './TableMain.module.scss';
@@ -17,7 +17,6 @@ export default function TableMain({ data }: PropsType) {
         sx={{
           '--Table-headerUnderlineThickness': '3px',
           '--TableCell-height': '44px',
-          'vertical-align': 'none',
         }}
       >
         <thead>
@@ -50,7 +49,7 @@ export default function TableMain({ data }: PropsType) {
         </thead>
         <tbody>
           {data.map((row) => (
-            <tr key={row.name}>
+            <tr key={row.id}>
               <td>{row.id}</td>
               <td>{row.name}</td>
               <td>
@@ -60,10 +59,51 @@ export default function TableMain({ data }: PropsType) {
               <td>{row.city}</td>
               <td>{row.course}</td>
               <td>{row.register}</td>
-              <td>{row.status}</td>
-              <td>{row.gaidOne}</td>
-              <td>{row.gaidTwo}</td>
-              <td>{row.onboarding}</td>
+              <td>
+                <div
+                  className={clsx(
+                    styles.wrapper,
+                    row.status === 'Активный' && styles.positive,
+                    row.status === 'Выбыл' && styles.negative,
+                    row.status === 'Уточняется' && styles.undefined
+                  )}
+                >
+                  {row.status}
+                </div>
+              </td>
+              <td>
+                <div
+                  className={clsx(
+                    styles.wrapper,
+                    row.gaidOne === 'Да' && styles.positive,
+                    row.gaidOne === 'Нет' && styles.negative
+                  )}
+                >
+                  {row.gaidOne}
+                </div>
+              </td>
+              <td>
+                <div
+                  className={clsx(
+                    styles.wrapper,
+                    row.gaidTwo === 'Да' && styles.positive,
+                    row.gaidTwo === 'Нет' && styles.negative
+                  )}
+                >
+                  {row.gaidTwo}
+                </div>
+              </td>
+              <td>
+                <div
+                  className={clsx(
+                    styles.wrapper,
+                    row.onboarding === 'Прошёл' && styles.positive,
+                    row.onboarding === 'Не прошёл' && styles.negative
+                  )}
+                >
+                  {row.onboarding}
+                </div>
+              </td>
               <td>
                 <a href="#text-ellipsis">{row.profile}</a>
               </td>
