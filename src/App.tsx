@@ -17,14 +17,14 @@ function App() {
   const [app, setApp] = useState(false);
   const dispatch = useAppDispatch();
 
-  const { data: currentUser, isSuccess } = useGetCurrentUserQuery();
+  const { data: currentUser, isLoading, isSuccess } = useGetCurrentUserQuery();
 
   useEffect(() => {
     if (isSuccess) {
       dispatch(setUser(currentUser));
     }
     setApp(true);
-  }, [isSuccess]); // eslint-disable-line
+  }, [isLoading]); // eslint-disable-line
 
   return (
     <div className="page">
