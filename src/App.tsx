@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Route, Routes } from 'react-router';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import ProtectedRoute from './pages/ProtectedRoute/ProtectedRoute';
 import AuthPage from './pages/AuthPage/AuthPage';
 import './index.css';
@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="page">
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/login" element={<AuthPage />} />
           <Route path="/" element={<ProtectedRoute />}>
@@ -33,7 +33,7 @@ function App() {
             <Route path="/analytics" element={<Analytics />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
