@@ -22,8 +22,8 @@ function App() {
   useEffect(() => {
     if (isSuccess) {
       dispatch(setUser(currentUser));
-      setApp(true);
     }
+    setApp(true);
   }, [isSuccess]); // eslint-disable-line
 
   return (
