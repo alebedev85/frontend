@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Avatar from '@mui/joy/Avatar';
 import Badge from '@mui/joy/Badge';
 import IconButton from '@mui/joy/IconButton';
@@ -8,6 +9,8 @@ import PopupHeader from '../PopupHeader/PopupHeader';
 import styles from './Header.module.scss';
 
 export default function Header() {
+  const [openPopup, setOpenPopup] = useState(false);
+
   return (
     <div className={styles.header}>
       <IconButton>
@@ -28,9 +31,19 @@ export default function Header() {
       </div>
 
       <div className={styles.header__avatar}>
-        <Avatar variant="soft" src={AV} />
+        <Avatar
+          onClick={() => {
+            setOpenPopup(true);
+          }}
+          variant="soft"
+          src={AV}
+        />
       </div>
-      <PopupHeader avatar={AV} />
+      <PopupHeader
+        isOpen={openPopup}
+        onClose={() => setOpenPopup(false)}
+        avatar={AV}
+      />
     </div>
   );
 }
