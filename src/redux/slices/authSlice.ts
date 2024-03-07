@@ -8,7 +8,7 @@ type InitialState = {
 };
 
 const initialState: InitialState = {
-  isAuth: true,
+  isAuth: false,
   user: null,
 };
 
@@ -17,6 +17,7 @@ const authSlice = createSlice({
   initialState,
   reducers: {
     setUser: (state, action: PayloadAction<UserType>) => {
+      console.log('setUser');
       state.isAuth = true;
       state.user = action.payload;
     },

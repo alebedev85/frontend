@@ -1,6 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
+import CircularProgress from '@mui/joy/CircularProgress';
 import ProtectedRoute from './pages/ProtectedRoute/ProtectedRoute';
 import AuthPage from './pages/AuthPage/AuthPage';
 import './index.css';
@@ -13,27 +14,35 @@ import { useAppDispatch } from './redux/store';
 import { useGetCurrentUserQuery } from './pages/AuthPage/api';
 
 function App() {
+  const [app, setApp] = useState(false);
   const dispatch = useAppDispatch();
+
   const { data: currentUser, isSuccess } = useGetCurrentUserQuery();
+
   useEffect(() => {
     if (isSuccess) {
       dispatch(setUser(currentUser));
+      setApp(true);
     }
   }, [isSuccess]); // eslint-disable-line
 
   return (
     <div className="page">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/login" element={<AuthPage />} />
-          <Route path="/" element={<ProtectedRoute />}>
-            <Route path="/" element={<Main />} />
-            <Route path="/send" element={<Send />} />
-            <Route path="/budget" element={<Budget />} />
-            <Route path="/analytics" element={<Analytics />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      {!app ? (
+        <CircularProgress size="lg" />
+      ) : (
+        <HashRouter>
+          <Routes>
+            <Route path="/login" element={<AuthPage />} />
+            <Route element={<ProtectedRoute />}>
+              <Route path="/" element={<Main />} />
+              <Route path="/send" element={<Send />} />
+              <Route path="/budget" element={<Budget />} />
+              <Route path="/analytics" element={<Analytics />} />
+            </Route>
+          </Routes>
+        </HashRouter>
+      )}
     </div>
   );
 }

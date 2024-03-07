@@ -1,5 +1,5 @@
-import React from 'react';
+import styles from './Send.module.scss';
 
 export default function Send() {
-  return <div>Send</div>;
+  return <div className={styles.send}>Send. Page in progress...</div>;
 }
