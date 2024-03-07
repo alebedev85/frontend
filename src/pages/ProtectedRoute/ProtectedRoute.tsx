@@ -13,7 +13,7 @@ export default function ProtectedRoute() {
       <Navbar />
       <div className={styles.layout}>
         <Header />
-        <div className={styles.wrapper}>
+        <div className={styles.outlet}>
           <Outlet />
         </div>
       </div>

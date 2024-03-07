@@ -53,7 +53,9 @@ export default function TableMain({ data }: PropsType) {
               <td>{row.id}</td>
               <td>{row.name}</td>
               <td>
-                <a href="#text-ellipsis">{row.telegramm}</a>
+                <a className={styles.table__link} href="#text-ellipsis">
+                  {row.telegramm}
+                </a>
               </td>
               <td>{row.promo}</td>
               <td>{row.city}</td>
@@ -63,9 +65,9 @@ export default function TableMain({ data }: PropsType) {
                 <div
                   className={clsx(
                     styles.wrapper,
-                    row.status === 'Активный' && styles.positive,
-                    row.status === 'Выбыл' && styles.negative,
-                    row.status === 'Уточняется' && styles.undefined
+                    row.status === 'Активный' && styles.wrapper_positive,
+                    row.status === 'Выбыл' && styles.wrapper_negative,
+                    row.status === 'Уточняется' && styles.wrapper_undefined
                   )}
                 >
                   {row.status}
@@ -75,8 +77,8 @@ export default function TableMain({ data }: PropsType) {
                 <div
                   className={clsx(
                     styles.wrapper,
-                    row.gaidOne === 'Да' && styles.positive,
-                    row.gaidOne === 'Нет' && styles.negative
+                    row.gaidOne === 'Да' && styles.wrapper_positive,
+                    row.gaidOne === 'Нет' && styles.wrapper_negative
                   )}
                 >
                   {row.gaidOne}
@@ -86,8 +88,8 @@ export default function TableMain({ data }: PropsType) {
                 <div
                   className={clsx(
                     styles.wrapper,
-                    row.gaidTwo === 'Да' && styles.positive,
-                    row.gaidTwo === 'Нет' && styles.negative
+                    row.gaidTwo === 'Да' && styles.wrapper_positive,
+                    row.gaidTwo === 'Нет' && styles.wrapper_negative
                   )}
                 >
                   {row.gaidTwo}
@@ -97,15 +99,17 @@ export default function TableMain({ data }: PropsType) {
                 <div
                   className={clsx(
                     styles.wrapper,
-                    row.onboarding === 'Прошёл' && styles.positive,
-                    row.onboarding === 'Не прошёл' && styles.negative
+                    row.onboarding === 'Прошёл' && styles.wrapper_positive,
+                    row.onboarding === 'Не прошёл' && styles.wrapper_negative
                   )}
                 >
                   {row.onboarding}
                 </div>
               </td>
               <td>
-                <a href="#text-ellipsis">{row.profile}</a>
+                <a className={styles.table__link} href="#text-ellipsis">
+                  {row.profile}
+                </a>
               </td>
             </tr>
           ))}
