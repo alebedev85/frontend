@@ -8,7 +8,7 @@ type InitialState = {
 };
 
 const initialState: InitialState = {
-  isAuth: false,
+  isAuth: true,
   user: null,
 };
 

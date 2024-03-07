@@ -1,10 +1,10 @@
-import React from 'react';
 import Avatar from '@mui/joy/Avatar';
 import Badge from '@mui/joy/Badge';
 import IconButton from '@mui/joy/IconButton';
 import AV from '../../assets/AV.png';
 import SearchIcon from '../../assets/SearchIcon.svg';
 import BadgeIcon from '../../assets/Badge_ball.svg';
+import PopupHeader from '../PopupHeader/PopupHeader';
 import styles from './Header.module.scss';
 
 export default function Header() {
@@ -30,6 +30,7 @@ export default function Header() {
       <div className={styles.header__avatar}>
         <Avatar variant="soft" src={AV} />
       </div>
+      <PopupHeader avatar={AV} />
     </div>
   );
 }
