@@ -7,11 +7,12 @@ import Send from './pages/Send/Send';
 import Budget from './pages/Budget/Budget';
 import Analytics from './pages/Analytics/Analytics';
 import Main from './pages/Main/Main';
+import Profile from './pages/Profile/Profile';
 
 function App() {
   return (
     <div className="page">
-      <BrowserRouter>
+      {/*       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<AuthPage />} />
           <Route path="/" element={<ProtectedRoute />}>
@@ -21,7 +22,8 @@ function App() {
             <Route path="/analytics" element={<Analytics />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+      <Profile />
     </div>
   );
 }

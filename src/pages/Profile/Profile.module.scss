@@ -1,0 +1,38 @@
+@import '../../styles/mixins';
+@import '../../styles/vars';
+
+.sheet {
+  width: 313px;
+  /* height: 556px; */
+  /* margin: 50px 50px; */
+  background-color: #f9fafb;
+  border-radius: 12px;
+  padding: 20px 20px;
+  border: '1px solid red';
+
+  &__input {
+    width: 126px;
+  }
+}
+
+.sheet label {
+  color: #797981;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px; /* 123.077% */
+}
+
+.form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formRow {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
