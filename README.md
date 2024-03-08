@@ -50,4 +50,3 @@ npm run build
 ## Авторы
 - [Лебеде Андрей](https://github.com/alebedev85)
 - [Блажев Вячислав](https://github.com/VSBlazhev)
-- [Татаренко Елисей](https://github.com/FreakPerry)
