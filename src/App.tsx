@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router';
 import { HashRouter } from 'react-router-dom';
-import CircularProgress from '@mui/joy/CircularProgress';
+import Loader from './components/Loader/Loader';
 import ProtectedRoute from './pages/ProtectedRoute/ProtectedRoute';
 import AuthPage from './pages/AuthPage/AuthPage';
 import './index.css';
@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="page">
       {!app ? (
-        <CircularProgress size="lg" />
+        <Loader />
       ) : (
         <HashRouter>
           <Routes>
