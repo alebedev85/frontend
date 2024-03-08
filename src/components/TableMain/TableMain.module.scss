@@ -19,6 +19,14 @@
     text-decoration: none;
     color: #5a9bff;
   }
+
+  &__profile {
+    border: none;
+    background-color: inherit;
+    text-decoration: none;
+    color: #5a9bff;
+    cursor: pointer;
+  }
 }
 
 .wrapper {

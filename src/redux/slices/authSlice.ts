@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store';
-import { UserType } from '../../types';
+import { UserType } from '../../utils/types';
 
 type InitialState = {
   isAuth: boolean;

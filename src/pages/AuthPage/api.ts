@@ -1,6 +1,6 @@
 import { mainApi } from '../../redux/mainApi';
 import { LoginFormData, signInResType } from './types';
-import { UserType } from '../../types';
+import { UserType } from '../../utils/types';
 
 const loginApi = mainApi.injectEndpoints({
   endpoints: (build) => ({
