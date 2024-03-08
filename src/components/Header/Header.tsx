@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Avatar from '@mui/joy/Avatar';
 import Badge from '@mui/joy/Badge';
 import IconButton from '@mui/joy/IconButton';
@@ -6,11 +7,21 @@ import AV from '../../assets/AV.png';
 import SearchIcon from '../../assets/SearchIcon.svg';
 import BadgeIcon from '../../assets/Badge_ball.svg';
 import PopupHeader from '../PopupHeader/PopupHeader';
+import { logOut } from '../../redux/slices/authSlice';
+import { useAppDispatch } from '../../redux/store';
+import { BEARER_KEY } from '../../utils/const';
 import styles from './Header.module.scss';
 
 export default function Header() {
   const [openPopup, setOpenPopup] = useState(false);
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
+  const onClickLogOut = () => {
+    dispatch(logOut);
+    localStorage.removeItem(BEARER_KEY);
+    navigate('/login', { replace: true });
+  };
   return (
     <div className={styles.header}>
       <IconButton>
@@ -42,6 +53,7 @@ export default function Header() {
       <PopupHeader
         isOpen={openPopup}
         onClose={() => setOpenPopup(false)}
+        onButton={() => onClickLogOut()}
         avatar={AV}
       />
     </div>

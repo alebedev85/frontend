@@ -15,6 +15,7 @@ import { useSignInMutation, useGetCurrentUserQuery } from './api';
 import leftTriangle from '../../assets/left_triangle.svg';
 import topCircle from '../../assets/top_circle.svg';
 import bottomRectangle from '../../assets/bottom_rectangle.svg';
+import { BEARER_KEY } from '../../utils/const';
 import './AuthPage.css';
 
 function AuthPage() {
@@ -37,7 +38,7 @@ function AuthPage() {
     signIn(data)
       .unwrap()
       .then(({ access }) => {
-        localStorage.setItem('Bearer', `Bearer ${access}`);
+        localStorage.setItem(BEARER_KEY, `Bearer ${access}`);
       })
       .then(() => {
         currentUser && dispatch(setUser(currentUser));

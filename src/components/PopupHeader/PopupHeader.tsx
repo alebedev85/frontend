@@ -7,12 +7,14 @@ type PopupHeaderPropsType = {
   avatar: string;
   isOpen: boolean;
   onClose: () => void;
+  onButton: () => void;
 };
 
 export default function PopupHeader({
   avatar,
   isOpen,
   onClose,
+  onButton,
 }: PopupHeaderPropsType) {
   return (
     <div className={clsx(styles.popup, isOpen && styles.popup_open)}>
@@ -22,7 +24,9 @@ export default function PopupHeader({
         </IconButton>
       </div>
       <Avatar src={avatar} size="lg" />
-      <Button size="lg">Выход</Button>
+      <Button size="lg" onClick={onButton}>
+        Выход
+      </Button>
     </div>
   );
 }
