@@ -2,13 +2,11 @@ import clsx from 'clsx';
 import Table from '@mui/joy/Table';
 import TableButtons from './TableButtons/TableButtons';
 import styles from './TableMain.module.scss';
-import { AmbassadorsType } from '../../utils/types';
+import { useAppSelector } from '../../redux/store';
+import { ambassadorsListSelector } from '../../redux/slices/ambassadorsSlice';
 
-type PropsType = {
-  data: AmbassadorsType[];
-};
-
-export default function TableMain({ data }: PropsType) {
+export default function TableMain() {
+  const data = useAppSelector(ambassadorsListSelector);
   return (
     <div className={styles.table}>
       <Table

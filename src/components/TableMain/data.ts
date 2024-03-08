@@ -1,4 +1,4 @@
-export const data = [
+export const test = [
   {
     id: 1,
     fio: 'Белоголовцев Владимир Сергеевич',

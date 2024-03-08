@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux';
 import authReducer from './slices/authSlice';
+import ambassadorsReducer from './slices/ambassadorsSlice';
 import { mainApi } from './mainApi';
 
 const store = configureStore({
   reducer: {
     auth: authReducer,
+    ambassadors: ambassadorsReducer,
     [mainApi.reducerPath]: mainApi.reducer,
   },
   devTools: true,
