@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import Chip from '@mui/joy/Chip';
 import Sheet from '@mui/joy/Sheet';
 import FormControl from '@mui/joy/FormControl';
@@ -8,7 +7,6 @@ import FormHelperText from '@mui/joy/FormHelperText';
 import { useState } from 'react';
 import Input from '@mui/joy/Input';
 import Stack from '@mui/joy/Stack';
-import Box from '@mui/joy/Box';
 import Typography from '@mui/joy/Typography';
 import IconButton from '@mui/joy/IconButton';
 import EditIcon from '@mui/icons-material/Edit';
@@ -48,17 +46,17 @@ export default function Preferences() {
         <FormControl disabled={disabled}>
           <FormLabel>Ссылка на блог амбасадора</FormLabel>
           <Input placeholder="Placeholder" />
-          {/* <FormHelperText>This is a helper text.</FormHelperText> */}
+          <FormHelperText>This is a helper text.</FormHelperText>
         </FormControl>
         <FormControl disabled={disabled}>
           <FormLabel>С какой целью пришел учиться</FormLabel>
           <Textarea minRows={2} />
-          {/* <FormHelperText>This is a helper text.</FormHelperText> */}
+          <FormHelperText>This is a helper text.</FormHelperText>
         </FormControl>
         <FormControl disabled={disabled}>
           <FormLabel>Заметки</FormLabel>
           <Textarea minRows={2} />
-          {/* <FormHelperText>This is a helper text.</FormHelperText> */}
+          <FormHelperText>This is a helper text.</FormHelperText>
         </FormControl>
       </form>
     </Sheet>

@@ -1,14 +1,10 @@
-import clsx from 'clsx';
-import Chip from '@mui/joy/Chip';
 import Sheet from '@mui/joy/Sheet';
 import FormControl from '@mui/joy/FormControl';
-import Textarea from '@mui/joy/Textarea';
 import FormLabel from '@mui/joy/FormLabel';
 import FormHelperText from '@mui/joy/FormHelperText';
 import { useState } from 'react';
 import Input from '@mui/joy/Input';
 import Stack from '@mui/joy/Stack';
-import Box from '@mui/joy/Box';
 import Typography from '@mui/joy/Typography';
 import IconButton from '@mui/joy/IconButton';
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
@@ -38,25 +34,25 @@ export default function Info() {
         <FormControl disabled={disabled}>
           <FormLabel>Индекс</FormLabel>
           <Input placeholder="Placeholder" />
-          {/* <FormHelperText>This is a helper text.</FormHelperText> */}
+          <FormHelperText>This is a helper text.</FormHelperText>
         </FormControl>
 
         <FormControl disabled={disabled}>
           <FormLabel>Город</FormLabel>
           <Input placeholder="Placeholder" />
-          {/* <FormHelperText>This is a helper text.</FormHelperText> */}
+          <FormHelperText>This is a helper text.</FormHelperText>
         </FormControl>
 
         <FormControl disabled={disabled}>
           <FormLabel>Улица</FormLabel>
           <Input placeholder="Placeholder" />
-          {/* <FormHelperText>This is a helper text.</FormHelperText> */}
+          <FormHelperText>This is a helper text.</FormHelperText>
         </FormControl>
 
         <FormControl disabled={disabled}>
           <FormLabel>Дом.Квартира</FormLabel>
           <Input placeholder="Placeholder" />
-          {/* <FormHelperText>This is a helper text.</FormHelperText> */}
+          <FormHelperText>This is a helper text.</FormHelperText>
         </FormControl>
 
         <Stack
@@ -90,13 +86,13 @@ export default function Info() {
         <FormControl disabled={disabled}>
           <FormLabel>Отправлен мерч, гайд 1</FormLabel>
           <Input placeholder="Placeholder" />
-          {/* <FormHelperText>This is a helper text.</FormHelperText> */}
+          <FormHelperText>This is a helper text.</FormHelperText>
         </FormControl>
 
         <FormControl disabled={disabled}>
           <FormLabel>Отправлен мерч, гайд 2</FormLabel>
           <Input placeholder="Placeholder" />
-          {/* <FormHelperText>This is a helper text.</FormHelperText> */}
+          <FormHelperText>This is a helper text.</FormHelperText>
         </FormControl>
       </form>
     </Sheet>

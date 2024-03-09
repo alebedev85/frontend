@@ -1,18 +1,14 @@
-import clsx from 'clsx';
-import Chip from '@mui/joy/Chip';
 import Sheet from '@mui/joy/Sheet';
 import FormControl from '@mui/joy/FormControl';
-import Textarea from '@mui/joy/Textarea';
 import FormLabel from '@mui/joy/FormLabel';
 import FormHelperText from '@mui/joy/FormHelperText';
 import { useState } from 'react';
 import Input from '@mui/joy/Input';
 import Stack from '@mui/joy/Stack';
-import Box from '@mui/joy/Box';
 import Typography from '@mui/joy/Typography';
 import IconButton from '@mui/joy/IconButton';
 import EditIcon from '@mui/icons-material/Edit';
-import Checkbox, { checkboxClasses } from '@mui/joy/Checkbox';
+import Checkbox from '@mui/joy/Checkbox';
 import Button from '@mui/joy/Button';
 import styles from './Profile.module.scss';
 
@@ -57,10 +53,10 @@ export default function Merch() {
             marginBottom="8px"
           >
             <Input placeholder="Placeholder" className={styles.sheet__input} />
-            {/* <FormHelperText>This is a helper text.</FormHelperText> */}
+            <FormHelperText>This is a helper text.</FormHelperText>
 
             <Input placeholder="Placeholder" className={styles.sheet__input} />
-            {/* <FormHelperText>This is a helper text.</FormHelperText> */}
+            <FormHelperText>This is a helper text.</FormHelperText>
           </Stack>
         </FormControl>
 
