@@ -28,6 +28,13 @@
   height: 100%;
   padding: 40px 20px;
   background-color: #fff;
+  position: relative;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+  left: -45px;
 }
 
 .sheet {
