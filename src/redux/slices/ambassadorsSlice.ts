@@ -1,17 +1,17 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store';
-import { AmbassadorInfoType, AmbassadorsType } from '../../utils/types';
+import { AmbassadorsType } from '../../utils/types';
 
 type InitialState = {
   ambassadorsList: AmbassadorsType[];
-  ambassadorInfo: AmbassadorInfoType | null;
   openProfile: boolean;
+  ambassadorId: string;
 };
 
 const initialState: InitialState = {
   ambassadorsList: [],
-  ambassadorInfo: null,
   openProfile: false,
+  ambassadorId: '',
 };
 
 const ambassadorsSlice = createSlice({
@@ -21,29 +21,22 @@ const ambassadorsSlice = createSlice({
     setAmbassadorsList: (state, action: PayloadAction<AmbassadorsType[]>) => {
       state.ambassadorsList = action.payload;
     },
-    setAmbassadorInfo: (state, action: PayloadAction<AmbassadorInfoType>) => {
-      state.ambassadorInfo = action.payload;
-    },
-    setOpenProfile: (state) => {
+    setAmbassadorInfo: (state, action: PayloadAction<string>) => {
+      state.ambassadorId = action.payload;
       state.openProfile = true;
     },
     resetAmbassadorInfo: (state) => {
-      state.ambassadorInfo = null;
+      state.ambassadorId = '';
       state.openProfile = false;
     },
   },
 });
 
 export default ambassadorsSlice.reducer;
-export const {
-  setAmbassadorsList,
-  setAmbassadorInfo,
-  resetAmbassadorInfo,
-  setOpenProfile,
-} = ambassadorsSlice.actions;
+export const { setAmbassadorsList, setAmbassadorInfo, resetAmbassadorInfo } =
+  ambassadorsSlice.actions;
 export const ambassadorsListSelector = (state: RootState) =>
   state.ambassadors.ambassadorsList;
-export const ambassadorsInfoSelector = (state: RootState) =>
-  state.ambassadors.ambassadorInfo;
-export const openProfileSelector = (state: RootState) =>
-  state.ambassadors.openProfile;
+export const ambassadorsIdSelector = (state: RootState) =>
+  state.ambassadors.ambassadorId;
+export const ambassadorsSelector = (state: RootState) => state.ambassadors;

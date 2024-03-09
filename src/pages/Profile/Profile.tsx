@@ -8,11 +8,15 @@ import Merch from './Merch';
 import MainInfo from './MainInfo';
 import styles from './Profile.module.scss';
 import { useAppSelector } from '../../redux/store';
-import { openProfileSelector } from '../../redux/slices/ambassadorsSlice';
+import { ambassadorsSelector } from '../../redux/slices/ambassadorsSlice';
 import { ProfilePropsType } from './type';
+import { useGetAmbassadorInfoQuery } from '../Main/api';
 
 export default function Profile({ onClose }: ProfilePropsType) {
-  const openProfile = useAppSelector(openProfileSelector);
+  const { openProfile, ambassadorId } = useAppSelector(ambassadorsSelector);
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { data } = useGetAmbassadorInfoQuery(ambassadorId);
 
   return (
     <div className={clsx(styles.profile, openProfile && styles.profile_opened)}>

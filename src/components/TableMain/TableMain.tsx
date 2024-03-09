@@ -107,7 +107,10 @@ export default function TableMain({ onProfile }: TableMainPropsType) {
                 </div>
               </td>
               <td>
-                <button className={styles.table__profile} onClick={onProfile}>
+                <button
+                  className={styles.table__profile}
+                  onClick={() => onProfile(`${row.id}`)}
+                >
                   Профаил
                 </button>
               </td>
