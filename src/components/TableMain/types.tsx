@@ -12,3 +12,7 @@ export type TableData = {
   onboarding: string;
   profile: string;
 }[];
+
+export type TableMainPropsType = {
+  onProfile: () => void;
+};

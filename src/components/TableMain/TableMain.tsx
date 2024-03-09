@@ -4,8 +4,9 @@ import TableButtons from './TableButtons/TableButtons';
 import styles from './TableMain.module.scss';
 import { useAppSelector } from '../../redux/store';
 import { ambassadorsListSelector } from '../../redux/slices/ambassadorsSlice';
+import { TableMainPropsType } from './types';
 
-export default function TableMain() {
+export default function TableMain({ onProfile }: TableMainPropsType) {
   const data = useAppSelector(ambassadorsListSelector);
   return (
     <div className={styles.table}>
@@ -106,7 +107,9 @@ export default function TableMain() {
                 </div>
               </td>
               <td>
-                <button className={styles.table__profile}>Профаил</button>
+                <button className={styles.table__profile} onClick={onProfile}>
+                  Профаил
+                </button>
               </td>
             </tr>
           ))}

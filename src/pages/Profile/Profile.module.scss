@@ -1,6 +1,34 @@
 @import '../../styles/mixins';
 @import '../../styles/vars';
 
+.profile{
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  padding-left: 136px;
+  background-color:rgba(24, 38, 64, 0.60);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  visibility: hidden;
+  transition: all 0.5s ease 0.5s;
+
+  &_opened {
+    left: 0;
+    visibility: visible;
+    opacity: 10;
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 40px 20px;
+  background-color: #FFF;
+}
+
 .sheet {
   width: 313px;
   background-color: #f9fafb;

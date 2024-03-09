@@ -4,7 +4,10 @@ import TableMain from '../../components/TableMain/TableMain';
 import Loader from '../../components/Loader/Loader';
 import styles from './Main.module.scss';
 import { useAppDispatch } from '../../redux/store';
-import { setAmbassadorsList } from '../../redux/slices/ambassadorsSlice';
+import {
+  setAmbassadorsList,
+  setOpenProfile,
+} from '../../redux/slices/ambassadorsSlice';
 import { useGetAmbassadorsListQuery } from './api';
 import { test } from '../../components/TableMain/data';
 
@@ -18,10 +21,19 @@ export default function Main() {
       dispatch(setAmbassadorsList(test));
     }
   }, [isLoading]); // eslint-disable-line
+
+  function handlerOpenProfile() {
+    dispatch(setOpenProfile());
+  }
+
   return (
     <div className={styles.main}>
       <Controles />
-      {isLoading ? <Loader /> : <TableMain />}
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <TableMain onProfile={() => handlerOpenProfile()} />
+      )}
     </div>
   );
 }
