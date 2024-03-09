@@ -8,9 +8,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  color: #1A1B22;
+  color: #1a1b22;
 }
 
-.page{
-  height:100vh;
+.page {
+  height: 100vh;
 }

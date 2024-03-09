@@ -1,5 +1,5 @@
-import React from 'react';
+import styles from './Analytics.module.scss';
 
 export default function Analytics() {
-  return <div>Analytics</div>;
+  return <div className={styles.analytics}>Analytics. Page in progress...</div>;
 }
