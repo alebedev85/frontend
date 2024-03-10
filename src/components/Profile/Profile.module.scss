@@ -14,10 +14,12 @@
   align-items: center;
   display: flex;
   transition: all 0.5s linear 0s;
+  visibility: hidden;
 
   &_opened {
     right: 0;
     z-index: 2;
+    visibility: visible;
   }
 }
 
