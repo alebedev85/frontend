@@ -98,7 +98,6 @@ function AuthPage() {
                 textAlign: 'left',
                 animation: 'none',
               }}
-              /* className={styles.authPage__formLabel} */
             >
               Логин
             </InputLabel>
