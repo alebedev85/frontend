@@ -6,36 +6,40 @@ import Preferences from './preferences';
 import Info from './Info';
 import Merch from './Merch';
 import MainInfo from './MainInfo';
+import Loader from '../Loader/Loader';
 import styles from './Profile.module.scss';
 import { useAppSelector } from '../../redux/store';
 import { ambassadorsSelector } from '../../redux/slices/ambassadorsSlice';
 import { ProfilePropsType } from './type';
-import { useGetAmbassadorInfoQuery } from '../Main/api';
+import { useGetAmbassadorInfoQuery } from '../../pages/Main/api';
 
 export default function Profile({ onClose }: ProfilePropsType) {
   const { openProfile, ambassadorId } = useAppSelector(ambassadorsSelector);
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { data } = useGetAmbassadorInfoQuery(ambassadorId);
+  const { isLoading } = useGetAmbassadorInfoQuery(ambassadorId);
 
   return (
     <div className={clsx(styles.profile, openProfile && styles.profile_opened)}>
-      <div className={styles.container}>
-        <IconButton
-          onClick={onClose}
-          className={styles.button}
-          variant="solid"
-          sx={{ backgroundColor: 'white' }}
-        >
-          <ArrowForwardIos sx={{ color: 'black' }} />
-        </IconButton>
-        <Stack display="flex" flexDirection="row" gap="8px">
-          <MainInfo />
-          <Preferences />
-          <Info />
-          <Merch />
-        </Stack>
-      </div>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <div className={styles.container}>
+          <IconButton
+            onClick={onClose}
+            className={styles.button}
+            variant="solid"
+            sx={{ backgroundColor: 'white' }}
+          >
+            <ArrowForwardIos sx={{ color: 'black' }} />
+          </IconButton>
+          <Stack display="flex" flexDirection="row" gap="8px">
+            <MainInfo />
+            <Preferences />
+            <Info />
+            <Merch />
+          </Stack>
+        </div>
+      )}
     </div>
   );
 }

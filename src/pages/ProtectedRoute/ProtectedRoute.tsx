@@ -4,7 +4,7 @@ import Header from '../../components/Header/Header';
 import styles from './ProtectedRoute.module.scss';
 import { useAppSelector, useAppDispatch } from '../../redux/store';
 import { authSelector } from '../../redux/slices/authSlice';
-import Profile from '../../pages/Profile/Profile';
+import Profile from '../../components/Profile/Profile';
 import { resetAmbassadorInfo } from '../../redux/slices/ambassadorsSlice';
 
 export default function ProtectedRoute() {
