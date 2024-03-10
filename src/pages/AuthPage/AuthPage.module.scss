@@ -1,0 +1,49 @@
+.authPage {
+  background-color: #1a1b22;
+  height: 100%;
+
+  &__leftTriangle {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+  }
+
+  &__topCircle {
+    position: absolute;
+    right: 51px;
+    top: 0;
+  }
+
+  &__bottomRectangle {
+    position: absolute;
+    right: 29px;
+    bottom: 0;
+  }
+
+  &__heading {
+    margin: 0 0 28px;
+    color: var(--Main-blue-button, #5a9bff);
+    font-feature-settings:
+      'clig' off,
+      'liga' off;
+    /* H1 Regular */
+    /*   font-family: 'YS Display Regular Regular'; */
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 117.647% */
+  }
+
+  &__formError {
+    color: var(--Error, #ff0200);
+    font-feature-settings:
+      'clig' off,
+      'liga' off;
+    /* Caption2 Regular */
+    font-family: 'YS Display';
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px; /* 109.091% */
+  }
+}
