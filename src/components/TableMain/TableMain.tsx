@@ -20,51 +20,33 @@ export default function TableMain({ onProfile }: TableMainPropsType) {
       >
         <thead>
           <tr>
-            <th style={{ width: '16px', textAlign: 'center' }}>
-              <p className={styles.sub}>№</p>
-            </th>
+            <th style={{ width: '16px', textAlign: 'center' }}>№</th>
             <th>
               <div className={styles.table__cell}>
-                <p className={styles.sub}>ФИО</p>
+                ФИО
                 <TableButtons />
               </div>
             </th>
-            <th>
-              <p className={styles.sub}>Телеграмм</p>
-            </th>
-            <th>
-              <p className={styles.sub}>Промокод</p>
-            </th>
-            <th>
-              <p className={styles.sub}>Город</p>
-            </th>
-            <th style={{ width: '44px' }}>
-              <p className={styles.sub}>Курс</p>
-            </th>
+            <th>Телеграмм</th>
+            <th>Промокод</th>
+            <th>Город</th>
+            <th style={{ width: '44px' }}>Курс</th>
             <th>
               <div className={styles.table__cell}>
-                <p className={styles.sub}>Дата регистр</p>
+                Дата регистр
                 <TableButtons />
               </div>
             </th>
             <th>
               <div className={styles.table__cell}>
-                <p className={styles.sub}>Статус</p>
+                Статус
                 <TableButtons />
               </div>
             </th>
-            <th>
-              <p className={styles.sub}>Гайд 1</p>
-            </th>
-            <th>
-              <p className={styles.sub}>Гайд 2</p>
-            </th>
-            <th>
-              <p className={styles.sub}>Онбординг</p>
-            </th>
-            <th>
-              <p className={styles.sub}>Профиль</p>
-            </th>
+            <th>Гайд 1</th>
+            <th>Гайд 2</th>
+            <th>Онбординг</th>
+            <th>Профиль</th>
           </tr>
         </thead>
         <tbody>
