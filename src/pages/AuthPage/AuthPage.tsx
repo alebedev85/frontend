@@ -175,22 +175,6 @@ function AuthPage() {
             Войти
           </Button>
         </Box>
-
-        <span className="authPage__span-acent">или</span>
-        <Button
-          variant="outlined"
-          sx={{
-            border: '1px solid white',
-            color: 'white',
-            width: '250px',
-            height: '50px',
-            alignSelf: 'center',
-            fontSize: '16px',
-            lineHeight: '20px',
-          }}
-        >
-          Войти по Практикум ID{' '}
-        </Button>
       </Box>
 
       <img className="authPage__left-triangle" src={leftTriangle} />
