@@ -55,4 +55,6 @@ npm run build
 - React-Redux 8.1.3
 - Redux-toolkit 1.9.7
 
+Для компонентов использовалась библеотека [JOY UI](https://mui.com/joy-ui/getting-started/)
+
 #### В папке styles переменные для цветов и миксины для шрифта
