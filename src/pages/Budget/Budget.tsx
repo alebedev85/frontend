@@ -68,16 +68,6 @@ export default function Budget() {
               bottom: 0,
               bgcolor: 'var(--TableCell-headBackground)',
             },
-            /* '& th > *:first-of-type': {
-            position: 'sticky',
-            left: 0,
-            zIndex: 10,
-            boxShadow: '1px 0 var(--TableCell-borderColor)',
-            bgcolor: 'background.surface',
-          }, */
-            /*           '&th > &:first-of-type': {
-            backgroundColor: 'white',
-          }, */
           }}
         >
           <thead>
