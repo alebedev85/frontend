@@ -14,7 +14,6 @@ export default function Budget() {
         marginBottom="36px"
         display="flex"
         flexDirection="row"
-        width="1330px"
         alignItems="flex-end"
         justifyContent="space-between"
       >
@@ -54,20 +53,6 @@ export default function Budget() {
           sx={{
             '--Table-headerUnderlineThickness': '3px',
             '--TableCell-height': '48px',
-
-            '& tr > *:first-child': {
-              position: 'sticky',
-              left: 0,
-              top: 0,
-              boxShadow: '1px 0 var(--TableCell-borderColor)',
-              bgcolor: 'background.surface',
-            },
-            '& tr > *:last-child': {
-              position: 'sticky',
-              right: 0,
-              bottom: 0,
-              bgcolor: 'var(--TableCell-headBackground)',
-            },
           }}
         >
           <thead>

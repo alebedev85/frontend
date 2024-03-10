@@ -13,7 +13,7 @@ export const test = [
   },
   {
     id: 2,
-    send: false,
+    send: true,
     curator: 'Владимир Белоголовцев',
     merch: 'Толстовка',
     fio: 'Иванов Иван Иванович',
@@ -37,7 +37,7 @@ export const test = [
   },
   {
     id: 4,
-    send: false,
+    send: true,
     curator: 'Владимир Белоголовцев',
     merch: 'Толстовка',
     fio: 'Иванов Иван Иванович',
@@ -73,7 +73,7 @@ export const test = [
   },
   {
     id: 7,
-    send: false,
+    send: true,
     curator: 'Владимир Белоголовцев',
     merch: 'Толстовка',
     fio: 'Иванов Иван Иванович',

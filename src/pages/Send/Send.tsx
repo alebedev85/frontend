@@ -23,7 +23,6 @@ export default function Send() {
         marginBottom="36px"
         display="flex"
         flexDirection="row"
-        width="1330px"
         alignItems="flex-end"
         justifyContent="space-between"
       >
@@ -90,7 +89,7 @@ export default function Send() {
               <th>Мерч</th>
               <th>ФИО</th>
               <th>Индекс</th>
-              <th style={{ width: '44px' }}>Страна</th>
+              <th>Страна</th>
               <th>
                 <div className={styles.table__cell}>Город</div>
               </th>
@@ -104,7 +103,7 @@ export default function Send() {
             {test.map((row) => (
               <tr key={row.id}>
                 <td>
-                  <Checkbox />
+                  <Checkbox checked={row.send} />
                 </td>
                 <td>{row.curator}</td>
                 <td>{row.merch}</td>
