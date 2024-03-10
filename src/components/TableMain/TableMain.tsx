@@ -20,10 +20,11 @@ export default function TableMain({ onProfile }: TableMainPropsType) {
       >
         <thead>
           <tr>
-            <th style={{ width: '16px' }}>№</th>
+            <th style={{ width: '16px', textAlign: 'center' }}>№</th>
             <th>
               <div className={styles.table__cell}>
-                ФИО <TableButtons />
+                ФИО
+                <TableButtons />
               </div>
             </th>
             <th>Телеграмм</th>
@@ -32,12 +33,14 @@ export default function TableMain({ onProfile }: TableMainPropsType) {
             <th style={{ width: '44px' }}>Курс</th>
             <th>
               <div className={styles.table__cell}>
-                Дата регистр <TableButtons />
+                Дата регистр
+                <TableButtons />
               </div>
             </th>
             <th>
               <div className={styles.table__cell}>
-                Статус <TableButtons />
+                Статус
+                <TableButtons />
               </div>
             </th>
             <th>Гайд 1</th>
@@ -107,7 +110,10 @@ export default function TableMain({ onProfile }: TableMainPropsType) {
                 </div>
               </td>
               <td>
-                <button className={styles.table__profile} onClick={onProfile}>
+                <button
+                  className={styles.table__profile}
+                  onClick={() => onProfile(`${row.id}`)}
+                >
                   Профаил
                 </button>
               </td>

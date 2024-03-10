@@ -13,5 +13,5 @@ const AmbassadorApi = mainApi.injectEndpoints({
   overrideExisting: false,
 });
 
-export const { useGetAmbassadorsListQuery, useLazyGetAmbassadorInfoQuery } =
+export const { useGetAmbassadorsListQuery, useGetAmbassadorInfoQuery } =
   AmbassadorApi;

@@ -14,5 +14,5 @@ export type TableData = {
 }[];
 
 export type TableMainPropsType = {
-  onProfile: () => void;
+  onProfile: (id: string) => void;
 };

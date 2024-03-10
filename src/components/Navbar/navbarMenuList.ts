@@ -20,9 +20,4 @@ export const navbarMenuList: NavbarMenuListItem[] = [
     label: 'Бюджет',
     link: '/budget',
   },
-  {
-    id: 4,
-    label: 'Аналитика',
-    link: '/analytics',
-  },
 ];
