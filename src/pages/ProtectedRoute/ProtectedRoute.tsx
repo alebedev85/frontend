@@ -2,16 +2,23 @@ import { Navigate, Outlet, useLocation } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
 import Header from '../../components/Header/Header';
 import styles from './ProtectedRoute.module.scss';
-import { useAppSelector } from '../../redux/store';
+import { useAppSelector, useAppDispatch } from '../../redux/store';
 import { authSelector } from '../../redux/slices/authSlice';
-import Profile from '../../pages/Profile/Profile';
+import Profile from '../../components/Profile/Profile';
+import { resetAmbassadorInfo } from '../../redux/slices/ambassadorsSlice';
 
 export default function ProtectedRoute() {
+  const dispatch = useAppDispatch();
   const { isAuth } = useAppSelector(authSelector);
   const location = useLocation();
+
+  function HandlerProfileClosed() {
+    dispatch(resetAmbassadorInfo());
+  }
+
   return isAuth ? (
     <div className={styles.container}>
-      <Profile />
+      <Profile onClose={() => HandlerProfileClosed()} />
       <Navbar />
       <div className={styles.layout}>
         <Header />
