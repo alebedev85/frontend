@@ -50,7 +50,7 @@ module.exports = {
     'no-unused-expressions': 'off',
     'react/button-has-type': 'off',
     'react/require-default-props': 'off',
-    'jsx-a11y/label-has-associated-control': 'on',
+    'jsx-a11y/label-has-associated-control': 'off',
     'no-plusplus': 'off',
     'default-case': 'off',
     radix: 'off',

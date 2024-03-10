@@ -4,7 +4,6 @@ import SearchIcon from '@mui/icons-material/Search';
 import { Button, FormControl, FormLabel, Input, Select, Stack } from '@mui/joy';
 import Option from '@mui/joy/Option';
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
-import clsx from 'clsx';
 import { test } from './testData';
 import styles from './Budget.module.scss';
 
