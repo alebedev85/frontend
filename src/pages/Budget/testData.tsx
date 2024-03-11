@@ -1,6 +1,6 @@
 export const test = [
   {
-    fio: 'Тест тестович тестов',
+    fio: 'Иванов Иван Иванович',
     january: 1,
     february: 2,
     march: 3,
@@ -15,7 +15,7 @@ export const test = [
     december: 12,
   },
   {
-    fio: 'Тест тестович тестов',
+    fio: 'Иванов Иван Иванович',
     january: 1,
     february: 2,
     march: 3,
@@ -30,7 +30,7 @@ export const test = [
     december: 13,
   },
   {
-    fio: 'Тест тестович тестов',
+    fio: 'Иванов Иван Иванович',
     january: 1,
     february: 2,
     march: 3,
@@ -45,7 +45,7 @@ export const test = [
     december: 14,
   },
   {
-    fio: 'Тест тестович тестов',
+    fio: 'Иванов Иван Иванович',
     january: 1,
     february: 2,
     march: 3,
@@ -60,7 +60,7 @@ export const test = [
     december: 14,
   },
   {
-    fio: 'Тест тестович тестов',
+    fio: 'Иванов Иван Иванович',
     january: 1,
     february: 2,
     march: 3,
@@ -75,7 +75,7 @@ export const test = [
     december: 14,
   },
   {
-    fio: 'Тест тестович тестов',
+    fio: 'Иванов Иван Иванович',
     january: 1,
     february: 2,
     march: 3,
@@ -90,7 +90,7 @@ export const test = [
     december: 14,
   },
   {
-    fio: 'Тест тестович тестов',
+    fio: 'Иванов Иван Иванович',
     january: 1,
     february: 2,
     march: 3,
@@ -105,7 +105,7 @@ export const test = [
     december: 14,
   },
   {
-    fio: 'Тест тестович тестов',
+    fio: 'Иванов Иван Иванович',
     january: 1,
     february: 2,
     march: 3,
@@ -120,7 +120,7 @@ export const test = [
     december: 14,
   },
   {
-    fio: 'Тест тестович тестов',
+    fio: 'Иванов Иван Иванович',
     january: 1,
     february: 2,
     march: 3,
@@ -135,7 +135,7 @@ export const test = [
     december: 14,
   },
   {
-    fio: 'Тест тестович тестов',
+    fio: 'Иванов Иван Иванович',
     january: 1,
     february: 2,
     march: 3,
@@ -150,7 +150,7 @@ export const test = [
     december: 14,
   },
   {
-    fio: 'Тест тестович тестов',
+    fio: 'Иванов Иван Иванович',
     january: 1,
     february: 2,
     march: 3,
@@ -165,7 +165,7 @@ export const test = [
     december: 14,
   },
   {
-    fio: 'Тест тестович тестов',
+    fio: 'Иванов Иван Иванович',
     january: 1,
     february: 2,
     march: 3,
@@ -180,7 +180,7 @@ export const test = [
     december: 14,
   },
   {
-    fio: 'Тест тестович тестов',
+    fio: 'Иванов Иван Иванович',
     january: 1,
     february: 2,
     march: 3,
