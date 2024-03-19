@@ -20,33 +20,51 @@ export default function TableMain({ onProfile }: TableMainPropsType) {
       >
         <thead>
           <tr>
-            <th style={{ width: '16px', textAlign: 'center' }}>№</th>
-            <th>
-              <div className={styles.table__cell}>
-                ФИО
-                <TableButtons />
-              </div>
+            <th style={{ width: '16px', textAlign: 'center' }}>
+              <p className={styles.table__headText}>№</p>
             </th>
-            <th>Телеграмм</th>
-            <th>Промокод</th>
-            <th>Город</th>
-            <th style={{ width: '44px' }}>Курс</th>
             <th>
               <div className={styles.table__cell}>
-                Дата регистр
+                <p className={styles.table__headText}>ФИО</p>
                 <TableButtons />
               </div>
             </th>
             <th>
+              <p className={styles.table__headText}>Телеграмм</p>
+            </th>
+            <th>
+              <p className={styles.table__headText}>Промокод</p>
+            </th>
+            <th>
+              <p className={styles.table__headText}>Город</p>
+            </th>
+            <th style={{ width: '44px' }}>
+              <p className={styles.table__headText}>Курс</p>
+            </th>
+            <th>
               <div className={styles.table__cell}>
-                Статус
+                <p className={styles.table__headText}>Дата регистр</p>
                 <TableButtons />
               </div>
             </th>
-            <th>Гайд 1</th>
-            <th>Гайд 2</th>
-            <th>Онбординг</th>
-            <th>Профиль</th>
+            <th>
+              <div className={styles.table__cell}>
+                <p className={styles.table__headText}>Статус</p>
+                <TableButtons />
+              </div>
+            </th>
+            <th>
+              <p className={styles.table__headText}>Гайд 1</p>
+            </th>
+            <th>
+              <p className={styles.table__headText}>Гайд 2</p>
+            </th>
+            <th>
+              <p className={styles.table__headText}>Онбординг</p>
+            </th>
+            <th>
+              <p className={styles.table__headText}>Профиль</p>
+            </th>
           </tr>
         </thead>
         <tbody>

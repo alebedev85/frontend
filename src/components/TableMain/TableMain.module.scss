@@ -27,6 +27,12 @@
     color: #5a9bff;
     cursor: pointer;
   }
+
+  &__headText {
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .sub{
